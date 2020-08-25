@@ -7,7 +7,20 @@ Attribution required
 
 @media (min-width: 768px) and (max-width: 992px) {
     /* Show 4th slide on md  if col-md-4*/
-    .estrategias-carousel .active.col-md-4.carousel-item+.carousel-item+.carousel-item+.carousel-item {
+    .estrategias-carousel .active.col-md-6.carousel-item+.carousel-item+.carousel-item {
+        position: absolute;
+        top: 0;
+        right: -50%;
+        /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    /* Show 4th slide on md  if col-md-4*/
+    .estrategias-carousel .active.col-lg-4.carousel-item+.carousel-item+.carousel-item+.carousel-item {
         position: absolute;
         top: 0;
         right: -33.3333%;
@@ -18,11 +31,13 @@ Attribution required
     }
 }
 
-@media (min-width: 576px) and (max-width: 768px) {
-    .estrategias-carousel .active.col-sm-6.carousel-item+.carousel-item+.carousel-item {
+@media (min-width: 1200px) {
+    /* Show 4th slide on md  if col-md-4*/
+    .estrategias-carousel .active.col-xl-3.carousel-item+.carousel-item+.carousel-item+.carousel-item+.carousel-item {
         position: absolute;
         top: 0;
-        right: -50%;
+        right: -25%;
+        /*change this with javascript in the future*/
         z-index: -1;
         display: block;
         visibility: visible;
@@ -30,13 +45,13 @@ Attribution required
 }
 
 @media (min-width: 320px) {
-    .carousel-item {
+    .estrategias-carousel .carousel-item {
         margin-right: 0;
     }
 }
 
 @media (min-width: 768px) {
-    .carousel-item {
+    .estrategias-carousel .carousel-item {
         margin-right: 0;
     }
     /* show 2 items */
@@ -52,9 +67,9 @@ Attribution required
         transform: translate3d(0, 0, 0);
     }
     /* left or forward direction */
-    .active.carousel-item-left+.carousel-item-next.carousel-item-left,
-    .carousel-item-next.carousel-item-left+.carousel-item,
-    .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item {
+    .estrategias-carousel .active.carousel-item-left+.carousel-item-next.carousel-item-left,
+    .estrategias-carousel .carousel-item-next.carousel-item-left+.carousel-item,
+    .estrategias-carousel .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item {
         position: relative;
         transform: translate3d(-100%, 0, 0);
         visibility: visible;
@@ -69,9 +84,9 @@ Attribution required
         visibility: visible;
     }
     /* right or prev direction */
-    .active.carousel-item-right+.carousel-item-prev.carousel-item-right,
-    .carousel-item-prev.carousel-item-right+.carousel-item,
-    .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item {
+    .estrategias-carousel .active.carousel-item-right+.carousel-item-prev.carousel-item-right,
+    .estrategias-carousel .carousel-item-prev.carousel-item-right+.carousel-item,
+    .estrategias-carousel .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item {
         position: relative;
         transform: translate3d(100%, 0, 0);
         visibility: visible;
@@ -205,7 +220,7 @@ Attribution required
 }
 
 @media (min-width: 320px) and (max-width:768px) {
-    .carousel-item {
+    .estrategias-carousel .carousel-item {
         margin-right: 0;
         padding-left: 15%;
     }
@@ -213,4 +228,8 @@ Attribution required
 
 .carousel-flecha .material-icons {
     font-size: 50px;
+}
+
+.carousel-flecha a:hover {
+    cursor: pointer;
 }

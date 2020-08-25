@@ -92,6 +92,17 @@
     --unnamed-line-spacing-127: 127px;
 }
 
+@media (min-width:1920px) {
+    #carouselPortada {
+        max-width: 1920px;
+        margin: auto;
+    }
+    #menu1 {
+        max-width: 1920px;
+        margin: auto;
+    }
+}
+
 a {
     color: #5b296e;
 }
